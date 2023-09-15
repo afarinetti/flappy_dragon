@@ -7,7 +7,8 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97d39ee3-638a-49bc-b99e-16bf1a8ee506" name="Changes" comment="Added player logic">
+    <list default="true" id="97d39ee3-638a-49bc-b99e-16bf1a8ee506" name="Changes" comment="Finished player logic">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694797813199</updated>
-      <workItem from="1694797814237" duration="1200000" />
+      <workItem from="1694797814237" duration="3748000" />
     </task>
     <task id="LOCAL-00001" summary="Adding gitignore">
       <option name="closed" value="true" />
@@ -121,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694798635372</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished player logic">
+      <option name="closed" value="true" />
+      <created>1694799082446</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694799082446</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +142,7 @@
     <MESSAGE value="Adding gitignore" />
     <MESSAGE value="Capturing current state" />
     <MESSAGE value="Added player logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added player logic" />
+    <MESSAGE value="Finished player logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished player logic" />
   </component>
 </project>
