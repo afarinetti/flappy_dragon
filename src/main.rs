@@ -1,5 +1,9 @@
 use bracket_lib::prelude::*;
 
+const SCREEN_WIDTH: i32 = 80;
+const SCREEN_HEIGHT: i32 = 50;
+const FRAME_DURATION: f32 = 75.0;
+
 enum GameMode {
     Menu,
     Playing,
@@ -22,8 +26,20 @@ impl State {
     }
 
     fn play(&mut self, ctx: &mut BTerm) {
-        // TODO: fill in later
-        self.mode = GameMode::End;
+        ctx.cls_bg(NAVY);
+        self.frame_time += ctx.frame_time_ms;
+        if self.frame_time > FRAME_DURATION {
+            self.frame_time = 0.0;
+            self.player.gravity_and_move();
+        }
+        if let Some(VirtualKeyCode::Space) = ctx.key {
+            self.player.flap();
+        }
+        self.player.render(ctx);
+        ctx.print(0, 0, "Press SPACE to flap.");
+        if self.player.y > SCREEN_HEIGHT {
+            self.mode = GameMode::End;
+        }
     }
 
     fn restart(&mut self) {
@@ -88,9 +104,9 @@ impl Player {
         }
     }
 
-    fn render(&mut self, ctx: &mut Bterm) {
+    fn render(&mut self, ctx: &mut BTerm) {
         ctx.set(
-            0,
+            self.x,
             self.y,
             YELLOW,
             BLACK,
